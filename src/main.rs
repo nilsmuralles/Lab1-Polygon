@@ -17,5 +17,6 @@ fn main() {
     line(&mut fb, &v1, &v2);
     line(&mut fb, &Vertex::new(140, 40), &Vertex::new(250, 65));
     line(&mut fb, &Vertex::new(250, 250), &Vertex::new(100, 230));
+    line(&mut fb, &Vertex::new(250, 250), &Vertex::new(200, 330));
     fb.render_to_file("result.png");
 }
