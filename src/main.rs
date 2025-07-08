@@ -14,12 +14,21 @@ fn main() {
     fb.clear();
 
     let p1 = Polygon::new(vec![
-        Vertex::new(50, 50),
-        Vertex::new(120, 60),
-        Vertex::new(100, 120),
-        Vertex::new(60, 100)
-    ], Color::RED, Color::RED);
-    p1.draw_polygon(&mut fb);
+        Vertex::new(165, 380),
+        Vertex::new(185, 360),
+        Vertex::new(180, 330),
+        Vertex::new(207, 345),
+        Vertex::new(233, 330),
+        Vertex::new(230, 360),
+        Vertex::new(250, 380),
+        Vertex::new(220, 385),
+        Vertex::new(205, 410),
+        Vertex::new(193, 383),
+    ], 
+        Color::RED, 
+        Color::BLACK
+    );
+    p1.draw(&mut fb);
 
     fb.render_to_file("result.png");
 }
