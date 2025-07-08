@@ -15,5 +15,6 @@ fn main() {
     let v1 = Vertex::new(20, 20);
     let v2 = Vertex::new(130, 60);
     line(&mut fb, &v1, &v2);
+    line(&mut fb, &Vertex::new(140, 40), &Vertex::new(250, 65));
     fb.render_to_file("result.png");
 }

@@ -12,9 +12,15 @@ pub fn line(
     let dx = x1 - x0;
     let dy = y1 - y0;
     if dx > 0 {
-        let m = dy as f32 / dx as f32;
+        let mut y = y0;
+        let mut p = 2*dy + dx;
         for x in 0..=dx {
-            framebuffer.set_pixel(x0 + x, (y0 as f32 + x as f32 * m) as i32);
+            framebuffer.set_pixel(x1 + x, y);
+            if p >= 0 {
+                y = y + 1;
+                p = p - 2*dx;
+            }
+            p = p + 2*dy;
         }
     }
 }
