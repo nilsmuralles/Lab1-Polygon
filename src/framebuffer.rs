@@ -46,4 +46,9 @@ impl FrameBuffer {
         self.color_buffer.export_image(file_path);
         println!("Image saved successfully as '{}'!", file_path);
     }
+
+    pub fn render_to_bmp(&self, file_path: &str) {
+        self.color_buffer.export_image(file_path);
+        println!("BMP file saved successfully as '{}'!", file_path);
+    }
 }
